@@ -117,6 +117,24 @@ Escolha uma baseada no seu nível de habilidade:
 
 ---
 
+## Projetos
+
+### 01 - Scanner Básico de Portas TCP
+
+**Status:** Completo | **Nível:** Iniciante | **Mês:** 1-3
+
+Scanner básico de portas TCP desenvolvido em Python puro para entender fundamentos de rede, conexões TCP/IP e metodologia de scanning.
+
+**O que você vai aprender:**
+- Fundamentos de TCP/IP e conexões de rede
+- Sockets em Python
+- Threading para paralelização
+- Primeira fase do penetration testing: Scanning
+
+**Localização:** [`projects/01-basic-port-scanner/`](projects/01-basic-port-scanner/)
+
+---
+
 ## Recursos Adicionais
 
 ### Plataformas de Prática
