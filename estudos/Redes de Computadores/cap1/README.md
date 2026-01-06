@@ -761,5 +761,78 @@ Marque quando dominar cada conceito:
 
 ---
 
+## 3 Ideias de Projetos Práticos
+
+### Projeto 1: Analisador de Topologia de Rede --> ARpy
+
+**Objetivo:** Criar um script que mapeia a topologia básica de uma rede local, identificando dispositivos e seus relacionamentos.
+
+**O que você vai fazer:**
+- Usar `arp -a` ou `ip neigh` para listar dispositivos conhecidos
+- Fazer scan de rede para descobrir dispositivos ativos
+- Identificar tipos de dispositivos (roteadores, switches, hosts)
+- Gerar um diagrama simples da topologia
+
+**Conceitos aplicados:**
+- Modelo OSI (identificar em qual camada cada ferramenta opera)
+- Redes broadcast vs point-to-point
+- Endereçamento de rede
+- Protocolos de descoberta (ARP)
+
+**Ferramentas:** Python, scapy, networkx (para visualização), arp-scan, nmap
+
+---
+
+### Projeto 2: Monitor de Protocolos em Rede
+
+**Objetivo:** Desenvolver um monitor que captura e classifica tráfego de rede por protocolo e camada OSI.
+
+**O que você vai fazer:**
+- Capturar pacotes usando biblioteca Python (scapy ou pyshark)
+- Identificar protocolos em diferentes camadas OSI
+- Classificar tráfego (HTTP na camada 7, TCP na camada 4, IP na camada 3, Ethernet na camada 2)
+- Gerar estatísticas de uso por protocolo
+
+**Conceitos aplicados:**
+- Hierarquia de protocolos
+- Modelo OSI em prática
+- Headers de diferentes camadas
+- Análise de tráfego de rede
+
+**Ferramentas:** Python, scapy/pyshark, Wireshark (para validação)
+
+---
+
+### Projeto 3: Simulador de Comunicação em Camadas
+
+**Objetivo:** Implementar uma simulação simples de comunicação seguindo o modelo OSI, onde dados passam por diferentes camadas.
+
+**O que você vai fazer:**
+- Criar classes Python para cada camada OSI
+- Simular encapsulamento (cada camada adiciona header)
+- Simular desencapsulamento (cada camada remove seu header)
+- Visualizar como dados são transformados em cada camada
+
+**Conceitos aplicados:**
+- Modelo OSI completo
+- Encapsulamento de dados
+- Hierarquia de protocolos
+- Interfaces entre camadas
+
+**Ferramentas:** Python (classes, objetos), visualização (matplotlib ou diagramas texto)
+
+**Exemplo de saída:**
+```
+Aplicação: "Hello"
+  ↓ adiciona header
+Transporte: [TCP Header]"Hello"
+  ↓ adiciona header
+Rede: [IP Header][TCP Header]"Hello"
+  ↓ adiciona header
+Enlace: [Ethernet Header][IP Header][TCP Header]"Hello"
+```
+
+---
+
 **Próximo Capítulo:** [Capítulo 2 - A Camada Física](../cap2/README.md)
 
